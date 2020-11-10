@@ -52,7 +52,6 @@ public class Solution3 {
      *
      */
     public int numJewelsInStones1(String J, String S) {
-
         int count=0;
         for(char s: S.toCharArray()){
             for(char j :J.toCharArray()){
