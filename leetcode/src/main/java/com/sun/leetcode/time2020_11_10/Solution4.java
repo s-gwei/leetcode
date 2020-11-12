@@ -28,8 +28,8 @@ public class Solution4 {
     @Test
     public void  reverseLeftWords(String s, int n) {
 
-        String a= s.substring(0,n-1);
-        String b=s.substring(n-1);
+        String a= s.substring(0,n);
+        String b=s.substring(n);
         s = b+a;
     }
 }
