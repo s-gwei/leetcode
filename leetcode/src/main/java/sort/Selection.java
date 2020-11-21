@@ -40,7 +40,7 @@ public class Selection {
             System.out.print(i+",");
         }
     }
-    @Test
+//    @Test
     public void test1(){
         int[] arr = {4,8,9,10,1,39,90,20,2,38};
         for(int i=0;i<arr.length-1;i++){
@@ -53,6 +53,46 @@ public class Selection {
             int temp = arr[i];
             arr[i] = arr[mini];
             arr[mini] = temp;
+        }
+        for(int i :arr){
+            System.out.print(i+",");
+        }
+    }
+
+//    @Test
+    public void test3(){
+        int[] arr = {4,8,9,10,1,39,90,20,2,38};
+        for(int i=0;i<arr.length-1;i++){
+            int mini = i;
+            int j = i+1;
+            while(j<arr.length){
+                if(arr[mini]>arr[j]){
+                    mini = j;
+                }
+                j++;
+            }
+            int temp = arr[i];
+            arr[i] = arr[mini];
+            arr[mini] = temp;
+        }
+        for(int i :arr){
+            System.out.print(i+",");
+        }
+    }
+
+    @Test
+    public  void Test4(){
+        int[] arr = {4,8,9,10,1,39,90,20,2,38};
+        for (int i =0;i<arr.length-1;i++){
+            int mini=i;
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[mini]<arr[j]){
+                    mini = j;
+                }
+            }
+            int temp = arr[mini];
+            arr[mini] = arr[i];
+            arr[i] = temp;
         }
         for(int i :arr){
             System.out.print(i+",");

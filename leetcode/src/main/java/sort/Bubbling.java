@@ -34,7 +34,7 @@ public class Bubbling {
     }
 
    //  冒泡排序循环次数（n-1）*n/2,(n^2-n)，对它求对数，可以得出冒泡排序时间复杂度为n
-   @Test
+//   @Test
    public  void test() {
         int[] arr = {10,8,29,74,39,50,72,47,91,30};
         for(int i=0;i<arr.length-1;i++){
@@ -46,6 +46,23 @@ public class Bubbling {
                     arr[j]=temp;
                 }
                 j++;
+            }
+        }
+        for(int i:arr){
+            System.out.print(i+",");
+        }
+    }
+    //冒泡排序：降序
+    @Test
+    public void test3(){
+        int[] arr = {10,8,29,74,39,50,72,47,91,30};
+        for(int i=0;i<arr.length-1;i++){
+            for(int j=0;j<arr.length-1-i;j++){
+                if(arr[j]<arr[j+1]){
+                    int temp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
+                }
             }
         }
         for(int i:arr){
